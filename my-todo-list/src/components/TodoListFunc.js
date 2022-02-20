@@ -12,6 +12,7 @@ export default function TodoListFunc(props) {
             <ul>
                 {todoList.length>0 && todoList.map(todo => (<li key={todo.id}>{todo.task}: {todo.description} <button onClick={() => handleDelete(todo.id)}>Done</button></li>))}
             </ul>
+            {todoList.length===0 && (<h3>Currently there is no task to show!</h3>)}
         </div>
     )
 }

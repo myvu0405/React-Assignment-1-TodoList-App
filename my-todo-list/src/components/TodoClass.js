@@ -72,8 +72,12 @@ export default class TodoClass extends React.Component {
 
         if(!errors.task && !errors.description) {
             this.setState({
-                todoList: [...this.state.todoList,this.state.newTask],
+                todoList: [...this.state.todoList,newTask],
                 errors: {
+                    task:'',
+                    description:''
+                },
+                newTask: {
                     task:'',
                     description:''
                 }
